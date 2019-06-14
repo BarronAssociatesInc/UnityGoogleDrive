@@ -510,5 +510,10 @@ namespace UnityGoogleDrive.Data
         /// Entries with null values are cleared in update and copy requests.
         /// </summary>
         public Dictionary<string, string> AppProperties { get; private set; }
+        /// <summary>
+        /// This property can be used to store whatever arbitrary data you want on this file.
+        /// </summary>
+        [Newtonsoft.Json.JsonIgnore]
+        public object UserData { get; set; }
     }
 }
